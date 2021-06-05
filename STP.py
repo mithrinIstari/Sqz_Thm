@@ -166,7 +166,7 @@ def graphThree():
     while ques.isdigit() == True:
         if ques == "0":
             print('\n' + Fore.YELLOW + "That's correct!")
-            print('\n' + 'Now you know what the Squeeze Theorem is!')
+            print('\n' + 'Now you know how to use the Squeeze Theorem!')
             return
         else:
             print('\n' + Fore.YELLOW + "Try again.")
