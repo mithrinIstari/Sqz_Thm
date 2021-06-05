@@ -1,6 +1,4 @@
 #Squeeze Theorem#
-
-import turtle
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -12,7 +10,6 @@ def main():
     answ = str(input("Do you want to learn about the Squeeze Theorem? Type 'yes' to continue: "))
     if answ.lower() == 'yes':
         squeeze()
-        
     else:
         print("Goodbye.")
         return
@@ -54,11 +51,14 @@ def limSin():
     print('\n' + Back.WHITE + entstr1 + Back.RESET)
     print(Fore.YELLOW + '\n' + ls1 + '\n')
     print('\n' + Fore.WHITE + entstr2 + '\n')
-    
-    x = np.linspace(-np.pi, np.pi, 500)   # sets up 500 points, between pi and -pi
-    y = np.sin((1/x))      # the function to graph
-
+     
+    # sets up 500 points, between pi and -pi #
+    x = np.linspace(-np.pi, np.pi, 500)  
+    # the function to graph #
+    y = np.sin((1/x))     
     fig1 = plt.figure()
+    
+    # setting axis #
     ax1 = fig1.add_subplot(1, 1, 1)
     ax1.spines['left'].set_position('center')
     ax1.spines['bottom'].set_position('center')
@@ -113,6 +113,7 @@ def whatIsSqueeze():
     fig2 = plt.figure()
     ax2 = fig2.add_subplot(1, 1, 1)
     
+    # setting axis # 
     ax2.spines['left'].set_position('zero')
     ax2.spines['bottom'].set_position('zero')
     ax2.spines['right'].set_color('none')
@@ -132,7 +133,7 @@ def whatIsSqueeze():
     print( '\n' + '\n' + Back.WHITE + Fore.RED + s9 + Back.RESET + '\n' + '\n' + s8 + Fore.MAGENTA + '\n' + Fore.WHITE + '\n' + s10)
 
     graphThree()
-
+# graph showing 'squeeze' #
 def graphThree():
     g1 = "The limit of x -> 0 of -|x| and |x| = 0."
     g2 = "x * sin(1/x) is between them,"
@@ -159,9 +160,7 @@ def graphThree():
 
     plt.legend(loc = "upper left")
     plt.show()
-    
-    Fore.WHITE
-    
+      
     ques = input(Fore.GREEN + '\n' + g1 + '\n'  + g2 + '\n' + '\n' + Fore.WHITE + g3 + '\n')
     # insert numeric test here # 
     while ques.isdigit() == True:
@@ -176,6 +175,5 @@ def graphThree():
             continue
     while ques.isdigit() == False:
         ques = (Fore.WHITE + "Invalid answer. Please enter a number.")
-    
 
 main()
